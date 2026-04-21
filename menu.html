@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buku Menu | Seni Hitam - Ruang Seduh Minimalis</title>
+    <meta name="description"
+        content="Eksplorasi kurasi menu kopi di Seni Hitam. Dari Espresso murni hingga Pour Over presisi. Tanpa sirup, tanpa kompromi, hanya kualitas absolut.">
+    <meta name="keywords"
+        content="menu seni hitam, harga kopi seni hitam malang, menu specialty coffee, espresso, pour over, menu kopi hitam, menu kopi putih">
+    <meta name="author" content="Seni Hitam">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://domainkamu.com/menu.html">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Buku Menu | Seni Hitam">
+    <meta property="og:description"
+        content="Pilihan terbatas. Kualitas sempurna. Lihat kurasi menu seduhan kami.">
+    <meta property="og:url" content="https://domainkamu.com/menu.html">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Menu",
+          "name": "Buku Menu Seni Hitam",
+          "url": "https://domainkamu.com/menu.html",
+          "mainEntityOfPage": "https://domainkamu.com/menu.html",
+          "hasMenuSection": [
+            {
+              "@type": "MenuSection",
+              "name": "Hitam",
+              "description": "Kopi murni tanpa campuran."
+            },
+            {
+              "@type": "MenuSection",
+              "name": "Putih",
+              "description": "Kopi dengan paduan susu oat murni."
+            }
+          ]
+        },
+        {
+          "@type": "CafeOrCoffeeShop",
+          "name": "Seni Hitam",
+          "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop",
+          "@id": "https://domainkamu.com/#business",
+          "url": "https://domainkamu.com/",
+          "telephone": "+6281234567890",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Apartment Begawan, Lantai Dasar, Jl. Raya Tlogomas No. 1-3",
+            "addressLocality": "Malang",
+            "addressRegion": "Jawa Timur",
+            "addressCountry": "ID"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CSS Bawaan dari file Index */
+        .cta-section { background-color: #0a0a0a; color: #ffffff; padding: 100px 0; text-align: center; }
+        .cta-section h2 { color: #ffffff; }
+        .cta-btn { background-color: #ffffff; color: #0a0a0a; padding: 15px 30px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: background 0.3s; }
+        .cta-btn:hover { background-color: #e5e5e5; }
+
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        .footer-title { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; margin-bottom: 20px; font-weight: 700; letter-spacing: 1px; }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #666; text-decoration: none; transition: color 0.3s; }
+        .footer-links a:hover { color: #000; }
+        
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .social-links { justify-content: center; }
+        }
+
+        .floating-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 999; }
+        .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); transition: transform 0.3s, opacity 0.3s; }
+        .float-btn:hover { transform: translateY(-3px); }
+        .wa-btn { background-color: #25D366; }
+        .top-btn { background-color: #0a0a0a; opacity: 0; pointer-events: none; }
+        .top-btn.visible { opacity: 1; pointer-events: auto; }
+
+        /* Penyesuaian layout Menu untuk halaman penuh */
+        .menu-page-header { text-align: center; margin-bottom: 60px; }
+        .menu-category { margin-bottom: 80px; }
+        .menu-category:last-child { margin-bottom: 0; }
+        .item-price::before { content: "Rp "; font-size: 0.8em; color: #888; }
+        .item-price::after { content: "K"; font-size: 0.8em; color: #888; }
+    </style>
+
+    <script src="https://unpkg.com/feather-icons" defer></script>
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Lanjut ke Konten Utama</a>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">SENI HITAM.</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">BERANDA</a>
+                    <a href="tentang.html" class="nav-link">TENTANG KAMI</a>
+                    <a href="menu.html" class="nav-link" style="border-bottom: 1px solid #000;">MENU</a>
+                    <a href="blog.html" class="nav-link">BLOG</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Buka Menu" id="menuToggle">
+                    <i data-feather="menu" stroke-width="1.5"></i>
+                </button>
+            </nav>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link mobile-link">BERANDA</a>
+                <a href="tentang.html" class="nav-link mobile-link">TENTANG KAMI</a>
+                <a href="menu.html" class="nav-link mobile-link">MENU</a>
+                <a href="index.html#blog" class="nav-link mobile-link">BLOG</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        
+        <section class="hero pb-section" style="padding-top: 120px;">
+            <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
+                <p class="label-mono mb-4">REPERTOAR RASA</p>
+                <h1 class="headline-oversized" style="font-size: clamp(3rem, 8vw, 5rem);">
+                    Kurasi.<br>
+                    <span class="italic-serif">Tanpa Distraksi.</span>
+                </h1>
+                <p class="hero-subtext mt-6" style="margin-left: auto; margin-right: auto;">
+                    Daftar di bawah ini bukanlah sekadar menu, melainkan komitmen. Kami mengkurasi biji kopi musiman terbaik dan menyeduhnya dengan parameter yang ketat. 
+                </p>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="menu py-section">
+            <div class="container" style="max-width: 900px;">
+                
+                <div class="menu-category">
+                    <div class="menu-page-header">
+                        <h2 class="text-4xl tracking-tight" style="font-family: 'Playfair Display', serif;">HITAM.</h2>
+                        <p class="label-mono mt-2" style="color: #666;">KEMURNIAN DALAM EKSTRAKSI</p>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Espresso Tunggal</h4>
+                                <span class="item-price">35</span>
+                            </div>
+                            <p class="item-desc">Ekstraksi 18 gram. Intensitas tinggi, tekstur kental (syrupy), profil rasa terang.</p>
+                        </div>
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Americano</h4>
+                                <span class="item-price">40</span>
+                            </div>
+                            <p class="item-desc">Espresso ganda dilebur dalam air bersuhu 92°C. Karakter kuat dan tegas.</p>
+                        </div>
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Tuang Manual (Pour Over V60)</h4>
+                                <span class="item-price">55</span>
+                            </div>
+                            <p class="item-desc">Diseduh manual menggunakan filter kertas. Sangat optimal untuk menyoroti kejernihan rasa dan keasaman buah (fruity notes).</p>
+                        </div>
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Cold Brew (Waktu Terbatas)</h4>
+                                <span class="item-price">50</span>
+                            </div>
+                            <p class="item-desc">Diseduh dengan air dingin selama 18 jam. Menghasilkan profil yang sangat halus, rendah asam, dengan akhir rasa yang manis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="section-divider" style="margin: 60px 0; border-color: #eee;">
+
+                <div class="menu-category">
+                    <div class="menu-page-header">
+                        <h2 class="text-4xl tracking-tight" style="font-family: 'Playfair Display', serif;">PUTIH.</h2>
+                        <p class="label-mono mt-2" style="color: #666;">HARMONI ESPRESSO DAN SUSU OAT</p>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Piccolo</h4>
+                                <span class="item-price">45</span>
+                            </div>
+                            <p class="item-desc">Ristretto (ekstraksi pendek) yang dituang ke dalam gelas kecil berisi susu bertekstur mikro. Kopi sangat dominan.</p>
+                        </div>
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Cortado</h4>
+                                <span class="item-price">45</span>
+                            </div>
+                            <p class="item-desc">Espresso ganda dan susu hangat yang dikukus dengan rasio 1:1. Mengurangi keasaman tanpa menghilangkan karakter asli.</p>
+                        </div>
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Cappuccino</h4>
+                                <span class="item-price">50</span>
+                            </div>
+                            <p class="item-desc">Keseimbangan klasik yang paripurna antara kopi, susu hangat, dan lapisan busa yang tebal di atasnya.</p>
+                        </div>
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Flat White</h4>
+                                <span class="item-price">50</span>
+                            </div>
+                            <p class="item-desc">Susu yang dikukus perlahan menghasilkan busa mikro (microfoam) tipis, memberikan tekstur lembut layaknya beludru.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="section-divider" style="margin: 60px 0; border-color: #eee;">
+
+                <div class="menu-category">
+                    <div class="menu-page-header">
+                        <h2 class="text-4xl tracking-tight" style="font-family: 'Playfair Display', serif;">ALTERNATIF.</h2>
+                        <p class="label-mono mt-2" style="color: #666;">SEDUHAN TANPA KAFEIN</p>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Cokelat Murni (Artisan)</h4>
+                                <span class="item-price">45</span>
+                            </div>
+                            <p class="item-desc">Cokelat hitam pekat asal Bali, dilelehkan dan diseduh dengan susu oat panas. Kaya dan membumi.</p>
+                        </div>
+                        <div class="menu-item group">
+                            <div class="item-header">
+                                <h4 class="item-name">Kudapan: Mentega & Roti</h4>
+                                <span class="item-price">35</span>
+                            </div>
+                            <p class="item-desc">Sourdough panggang disajikan sederhana dengan mentega asin. Pendamping netral yang ideal untuk kopi hitam.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section" style="margin-top: 40px;">
+            <div class="container">
+                <h2 class="text-5xl tracking-tight mb-4">Sudah Menentukan Pilihan?</h2>
+                <p class="text-lg text-muted-foreground mb-8" style="color:#aaa;">Kunjungi ruang seduh kami atau hubungi barista untuk menanyakan ketersediaan biji kopi (beans) hari ini.</p>
+                <a href="https://wa.me/6281234567890" target="_blank" class="cta-btn text-decoration-none">
+                    HUBUNGI KAMI <i data-feather="arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer py-8" style="padding-top: 60px;">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo text-3xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">SENI HITAM.
+                </div>
+                <p class="text-muted-foreground text-sm" style="max-width: 250px; line-height: 1.6;">
+                    Minimalisme bukanlah kekurangan sesuatu. Ialah jumlah yang tepat dari sesuatu.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-title">NAVIGASI</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">LOKASI & SOSIAL</h4>
+                <p class="text-sm text-muted-foreground mb-4" style="line-height: 1.6;">
+                    Apartment Begawan, Lantai Dasar<br>
+                    Jl. Raya Tlogomas No. 1-3<br>
+                    Kota Malang
+                </p>
+                <div class="social-links" style="display: flex; gap: 15px;">
+                    <a href="#" aria-label="Instagram"><i data-feather="instagram" size="20" stroke-width="1.5"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-feather="twitter" size="20" stroke-width="1.5"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container"
+            style="border-top: 1px solid #eaeaea; margin-top: 40px; padding-top: 20px; text-align: center;">
+            <div class="label-mono text-sm text-muted-foreground">© 2026 SENI HITAM. SELURUH HAK CIPTA DILINDUNGI.</div>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="#" id="backToTop" class="float-btn top-btn" aria-label="Kembali ke Atas">
+            <i data-feather="chevron-up"></i>
+        </a>
+        <a href="https://wa.me/6281234567890" target="_blank" class="float-btn wa-btn"
+            aria-label="Hubungi via WhatsApp">
+            <i data-feather="message-circle"></i>
+        </a>
+    </div>
+
+    <script>
+        // Initialize Feather Icons
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            const isActive = mobileNav.classList.contains('active');
+            menuToggle.innerHTML = isActive ? '<i data-feather="x" stroke-width="1.5"></i>' : '<i data-feather="menu" stroke-width="1.5"></i>';
+            feather.replace();
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                menuToggle.innerHTML = '<i data-feather="menu" stroke-width="1.5"></i>';
+                feather.replace();
+            });
+        });
+
+        // Back to Top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
