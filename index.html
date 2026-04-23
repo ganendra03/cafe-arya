@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Primary Meta Tags -->
     <title>Seni Hitam | Ruang Seduh Minimalis & Specialty Coffee di Malang</title>
     <meta name="description"
         content="Nikmati kopi murni tanpa kompromi di Seni Hitam Malang. Kedai kopi minimalis dengan estetika monokrom, fokus pada kualitas biji kopi specialty dan kejernihan rasa.">
@@ -17,7 +16,6 @@
     <meta name="bingbot" content="index, follow">
     <link rel="canonical" href="https://domainkamu.com/">
 
-    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -25,7 +23,6 @@
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#0a0a0a">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Seni Hitam | Ruang Seduh Minimalis Malang">
     <meta property="og:description"
@@ -34,7 +31,6 @@
     <meta property="og:image"
         content="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1200&auto=format&fit=crop">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Seni Hitam | Ruang Seduh Minimalis Malang">
     <meta name="twitter:description"
@@ -42,7 +38,6 @@
     <meta name="twitter:image"
         content="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1200&auto=format&fit=crop">
 
-    <!-- AI Overview & Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -81,7 +76,6 @@
     }
     </script>
 
-    <!-- Performance Optimization: Preconnect & Font Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://unpkg.com">
@@ -89,7 +83,6 @@
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
         rel="stylesheet">
 
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -212,17 +205,6 @@
             color: #000;
         }
 
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-        }
-
         /* Floating Buttons */
         .floating-container {
             position: fixed;
@@ -266,6 +248,120 @@
             opacity: 1;
             pointer-events: auto;
         }
+
+        /* ==================================================================== */
+        /* PERBAIKAN KHUSUS MOBILE (TIDAK GESER KANAN-KIRI & PROFESIONAL)       */
+        /* ==================================================================== */
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden; /* Mencegah geser kanan-kiri (horizontal scroll) */
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            /* Mengatur ulang teks yang kebesaran agar tidak melebar (overflow) */
+            .headline-oversized {
+                font-size: 2.8rem !important;
+                line-height: 1.1 !important;
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+
+            h2.text-5xl, h2.text-4xl {
+                font-size: 2.2rem !important;
+            }
+
+            .hero-subtext {
+                font-size: 1rem !important;
+                margin-top: 15px;
+                margin-bottom: 30px;
+            }
+
+            /* Tombol lebih proporsional di mobile */
+            .hero-cta {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+
+            .btn {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* Grid menjadi 1 kolom agar tidak meluber */
+            .footer-grid, 
+            .grid-2-col, 
+            .menu-grid {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .about-image-wrapper {
+                margin-top: 20px;
+            }
+
+            /* Perbaikan Navbar Mobile Profesional */
+            .header {
+                position: relative; /* Anchor untuk mobile nav */
+            }
+
+            .mobile-nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #0a0a0a;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .mobile-nav.active {
+                display: flex;
+            }
+
+            .mobile-link {
+                color: #ffffff;
+                padding: 15px 20px;
+                text-decoration: none;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.9rem;
+                text-align: left;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                transition: background-color 0.3s;
+            }
+
+            .mobile-link:last-child {
+                border-bottom: none;
+            }
+
+            .mobile-link:hover {
+                background-color: #1a1a1a;
+            }
+        }
+        /* ==================================================================== */
     </style>
 
     <script src="https://unpkg.com/feather-icons" defer></script>
@@ -315,7 +411,7 @@
                     presisi. Reduksi pada esensi tertinggi.
                 </p>
                 <div class="hero-cta">
-                    <a href="#menu" class="btn btn-primary">LIHAT MENU <i data-feather="arrow-right" size="18"
+                    <a href="menu.html" class="btn btn-primary">LIHAT MENU <i data-feather="arrow-right" size="18"
                             stroke-width="1.5"></i></a>
                     <a href="#tentang" class="btn btn-ghost">PELAJARI KAMI</a>
                 </div>
